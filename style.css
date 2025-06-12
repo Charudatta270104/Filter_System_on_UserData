@@ -1,0 +1,138 @@
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background: linear-gradient(
+    45deg,
+    red,
+    orange,
+    yellow,
+    green,
+    blue,
+    indigo,
+    violet
+  );
+  background-size: 400% 400%;
+  animation: rainbowBackground 2s linear infinite;
+  opacity: 0.3;
+}
+
+@keyframes rainbowBackground {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+body {
+  font-family: "Comic Sans MS", cursive, sans-serif;
+  background: linear-gradient(to right, #f8e2cf, #e0f7fa);
+  margin: 0;
+  padding: 0;
+  color: black;
+  cursor: none;
+  overflow-x: hidden;
+}
+
+.custom-cursor {
+  position: fixed;
+  width: 10px;
+  height: 10px;
+  background-color: black;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 1;
+  /* transition: background-color 0.2s ease, transform 0.1s ease; */
+  mix-blend-mode: overlay;
+}
+
+* {
+  transition: color 0.2s ease, background-color 0.2s ease;
+}
+*:hover ~ .custom-cursor {
+  background-color: magenta;
+  transform: scale(1.5);
+}
+
+.container {
+  width: 90%;
+  max-width: 800px;
+  margin: 30px auto;
+  text-align: center;
+  background-color: #ffffcc;
+  border: 4px double #333;
+  padding: 20px;
+  box-shadow: 5px 5px 0px #999;
+}
+
+input[type="text"] {
+  padding: 10px;
+  width: 100%;
+  max-width: 400px;
+  margin-bottom: 20px;
+  border: 2px inset #999;
+  border-radius: 0;
+  font-size: 16px;
+  background-color: #fff8e1;
+  color: #000;
+  box-shadow: 2px 2px 0px #aaa;
+}
+
+.user-list {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.user-card {
+  background: #ccffff;
+  padding: 15px;
+  border: 2px dotted #000;
+  border-radius: 5px;
+  box-shadow: 3px 3px 0px #666;
+  text-align: left;
+  font-size: 14px;
+  transition: all 0.2s ease-in-out;
+}
+
+.user-card:hover {
+  transform: scale(1.02);
+  background-color: #ffccff;
+  cursor: pointer;
+}
+
+.user-card h3 {
+  margin: 0 0 5px;
+  color: #003366;
+  font-weight: bold;
+  text-shadow: 1px 1px #fff;
+}
+
+.user-card p {
+  margin: 4px 0;
+  color: #333;
+}
+
+@media (max-width: 600px) {
+  .container {
+    padding: 15px;
+  }
+
+  input[type="text"] {
+    font-size: 14px;
+  }
+
+  .user-card {
+    font-size: 13px;
+    padding: 12px;
+  }
+}
