@@ -38,14 +38,13 @@
 
 ## 📂 Project Structure
 
-    ```bash
+```bash
     📁 user-filter-system
     ├── index.html
     ├── style.css
     ├── index.js
 
 ```
-
 
 ## Screenshot
 
@@ -54,5 +53,3 @@
 ![User_Filter_system](./img/image1.png)
 
 ## [🚀 View Live Demo](https://charudatta270104.github.io/Filter_System_on_UserData/)
-
-```
